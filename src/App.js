@@ -9,8 +9,16 @@ const  App=()=> {
   const [loading, setLoading] = useState(false);
 
  const [errorMessage, setErrorMessage] = useState("");
-  const connectionStatus = navigator.onLine;
-
+  const [connectionStatus, setConnectionStatus] = useState(navigator.onLine);
+useEffect(()=>{
+  window.addEventListener('online',()=>{
+    setConnectionStatus(true);
+  });
+  window.addEventListener('offline',()=>{
+    setConnectionStatus(false);
+  })
+  console.log('useffect is running');
+})
   useEffect(()=>{
     setLoading(true);
     getRequest().then((response)=>{
