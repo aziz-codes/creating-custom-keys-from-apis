@@ -17,7 +17,6 @@ useEffect(()=>{
   window.addEventListener('offline',()=>{
     setConnectionStatus(false);
   })
-  console.log('useffect is running');
 })
   useEffect(()=>{
     setLoading(true);

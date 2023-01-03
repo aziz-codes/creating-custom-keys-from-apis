@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components{
+    .text-inputs{
+        @apply border outline-none border-gray-300 text-sm rounded-md h-7 w-1/2 -mt-1 p-1
+    }
+}
+textarea{
+    resize: none !important;
+}
