@@ -7,7 +7,7 @@ const Overlay = ({user,handleClose}) => {
         <div className='bg-white h-56 w-56 rounded-md flex flex-col items-center justify-center'>
            <img src={user.avatar} className="h-14 w-14 rounded-full" alt={user.name}/>
            <h3>{user.name}</h3>
-           <label>{user.email}</label>
+      <a href={`mailto:${user.email}`} className='hover:text-sky-500 '>{user.email}</a>
         </div>
     </div>
   )
